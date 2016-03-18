@@ -4,7 +4,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className='row'>
-        <div className='col-md-12'>Раздел /Home/</div>
+        <div className='col-md-12'>Раздел /home</div>
       </div>
     )
   }

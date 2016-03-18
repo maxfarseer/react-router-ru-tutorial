@@ -22,8 +22,8 @@ export default class App extends Component {
     let Child
 
     switch (this.state.route) {
-      case '/admin/': Child = Admin; break;
-      case '/genre/': Child = Genre; break;
+      case '/admin': Child = Admin; break;
+      case '/genre': Child = Genre; break;
       default: Child = Home;
     }
 
@@ -31,8 +31,8 @@ export default class App extends Component {
       <div className='container'>
         <h1>App</h1>
         <ul>
-          <li><a href='#/admin/'>Admin</a></li>
-          <li><a href='#/genre/'>Genre</a></li>
+          <li><a href='#/admin'>Admin</a></li>
+          <li><a href='#/genre'>Genre</a></li>
         </ul>
         <Child />
       </div>
