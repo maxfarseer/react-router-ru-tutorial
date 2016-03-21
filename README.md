@@ -1,2 +1,2 @@
 # react-router-course-ru
-Код для раздела [BrowserHistory vs HashHistory](https://maxfarseer.gitbooks.io/react-router-course-ru/content/browserhistory_vs_hashhistory.html)
+Код для раздела [Дописываем роуты](https://maxfarseer.gitbooks.io/react-router-course-ru/content/dopisivaem_routi.html)
