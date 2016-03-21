@@ -5,6 +5,7 @@ export default class Genre extends Component {
     return (
       <div className='row'>
         <div className='col-md-12'>Раздел /genre</div>
+        {this.props.children}
       </div>
     )
   }
