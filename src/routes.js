@@ -3,7 +3,7 @@ import { Route, IndexRoute } from 'react-router'
 
 import App from './containers/App'
 import Admin from './components/Admin'
-import Genre from './components/Genre'
+import List from './components/List'
 import Release from './components/Release'
 import ReleaseItem from './components/ReleaseItem'
 import Home from './components/Home'
@@ -14,10 +14,9 @@ export const routes = (
     <Route path='/' component={App}>
       <IndexRoute component={Home} />
       <Route path='/admin' component={Admin} />
-      <Route path='/genre' component={Genre}>
-        <Route path='/genre/release' component={Release}>
-          <Route path='/genre/release/:name' component={ReleaseItem} />
-        </Route>
+      <Route path='/list' component={List} />
+      <Route path='/:genre/' component={Release}>
+        <Route path='/:genre/:name' component={ReleaseItem} />
       </Route>
     </Route>
     <Route path='*' component={NotFound} />
