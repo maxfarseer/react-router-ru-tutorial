@@ -7,7 +7,9 @@ import { routes } from './routes'
 
 if (module.hot) {
   module.hot.accept('./routes', () => {
-    // we need to replace routes
+    // won't work... need solution to replacing routes...
+    const nextRoutes = require('./routes')
+    Router.createRoutes(nextRoutes)
   })
 }
 
