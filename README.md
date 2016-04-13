@@ -1,2 +1,2 @@
 # react-router-course-ru
-Код для раздела [Разделение доступа](https://maxfarseer.gitbooks.io/react-router-course-ru/content/razdelenie_dostupa.html)
+Код для раздела [Подтверждение перехода](https://maxfarseer.gitbooks.io/react-router-course-ru/content/podtverzhdenie_perehoda.html)
