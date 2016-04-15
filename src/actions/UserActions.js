@@ -17,9 +17,7 @@ export function login(payload) {
     setTimeout(() => {
       dispatch({
         type: LOGIN_SUCCESS,
-        meta: {
-          redirect: `/genre/${payload.name}`
-        }
+        redirect: `/genre/${payload.name}`
       })
     },2000)
 
