@@ -10,8 +10,8 @@ export class PopupPage extends Component {
   handleCloseClick() {
     this.props.popupActions.hide()
   }
-  handleLoginClick() {
-    this.props.userActions.login()
+  handleLoginClick(user) {
+    this.props.userActions.login(user)
   }
   render() {
     return <Popup isOpen={this.props.popup.isOpen}

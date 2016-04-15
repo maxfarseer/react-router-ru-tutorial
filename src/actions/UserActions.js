@@ -8,9 +8,21 @@ import {
 } from '../constants/User'
 
 export function login(payload) {
-  // TODO
-  return {
-    type: LOGIN_REQUEST
+  return (dispatch) => {
+
+    dispatch({
+      type: LOGIN_REQUEST
+    })
+
+    setTimeout(() => {
+      dispatch({
+        type: LOGIN_SUCCESS,
+        meta: {
+          redirect: `/genre/${payload.name}`
+        }
+      })
+    },2000)
+
   }
 }
 
