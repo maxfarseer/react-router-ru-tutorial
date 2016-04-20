@@ -13,19 +13,19 @@ export default function userstate(state = initialState, action) {
 
     case LOGIN_REQUEST:
       // TODO
-      return {}
+      return state
 
     case LOGIN_SUCCESS:
-      // TODO
-      return {}
+
+      return {...state, name: action.payload }
 
     case LOGIN_FAIL:
       // TODO
-      return {}
+      return state
 
     case LOGOUT_SUCCESS:
       // TODO
-      return {}
+      return state
 
     default:
       return state

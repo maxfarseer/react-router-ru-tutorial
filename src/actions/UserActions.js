@@ -14,10 +14,20 @@ export function login(payload) {
       type: LOGIN_REQUEST
     })
 
+    let redirect;
+    const username = payload.name;
+
+    if (username === 'admin') {
+      redirect = '/admin'
+    } else {
+      redirect = '/'
+    }
+
     setTimeout(() => {
       dispatch({
         type: LOGIN_SUCCESS,
-        redirect: `/genre/${payload.name}`
+        payload: username,
+        redirect: redirect
       })
     },2000)
 

@@ -9,16 +9,18 @@ import Release from './components/Release'
 import Home from './components/Home'
 import NotFound from './components/NotFound'
 
-export const routes = (
-  <div>
-    <Route path='/' component={App}>
-      <IndexRoute component={Home} />
-      <Route path='/admin' component={Admin} onEnter={Admin.onEnter}/>
-      <Route path='/genre/:genre' component={Genre}>
-        <Route path='/genre/:genre/:release' component={Release} />
+export function getRoutes(store) {
+  return (
+    <div>
+      <Route path='/' component={App}>
+        <IndexRoute component={Home} />
+        <Route path='/admin' component={Admin} onEnter={Admin.onEnter.bind(this,store)}/>
+        <Route path='/genre/:genre' component={Genre}>
+          <Route path='/genre/:genre/:release' component={Release} />
+        </Route>
+        <Route path='/list' component={List} />
       </Route>
-      <Route path='/list' component={List} />
-    </Route>
-    <Route path='*' component={NotFound} />
-  </div>
-)
+      <Route path='*' component={NotFound} />
+    </div>
+  )
+}

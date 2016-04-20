@@ -4,7 +4,7 @@ import {
 } from '../constants/Popup'
 
 const initialState = {
-  isOpen: true
+  isOpen: false
 }
 
 export default function popupstate(state = initialState, action) {

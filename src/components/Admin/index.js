@@ -1,11 +1,24 @@
+/*eslint-disable */
 import React, { Component } from 'react'
+import {
+  POPUP_SHOW
+} from '../../constants/Popup'
 
 export default class Admin extends Component {
-  static onEnter(nextState, replace) {
-    const login = window.localStorage.getItem('rr_login')
-    if (login !== 'admin') {
+  static onEnter(store, nextState, replace) {
+    const user = store.getState().user
+    console.log(user)
+    if (!user.name) {
+      store.dispatch({
+        type: POPUP_SHOW
+      })
       replace('/')
+    } else {
+      if (user.name !== 'admin') {
+        replace('/')
+      }
     }
+
   }
   render() {
     return (
@@ -15,3 +28,5 @@ export default class Admin extends Component {
     )
   }
 }
+
+/*eslint-enable */
